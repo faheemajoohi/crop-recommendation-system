@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, MapPin, Loader, Sprout, Thermometer, Droplets, Cloud } from 'lucide-react';
 import axios from 'axios';
-import { API_URL } from '../config';
+import { API_URL } from './config';
 import './LiveMode.css';
 
 // request browser/location (returns { latitude, longitude })
