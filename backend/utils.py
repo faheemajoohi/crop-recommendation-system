@@ -7,7 +7,7 @@ import requests
 # Add parent directory to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from .api.weather_api import get_weather_and_rainfall
+from weather_api import get_weather_and_rainfall
 
 # ------------------------------
 # 📍 Location Detection Function
