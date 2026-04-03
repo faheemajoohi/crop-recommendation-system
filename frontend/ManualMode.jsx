@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Loader, Sprout, Thermometer, Droplets, Cloud } from 'lucide-react';
 import axios from 'axios';
-import { API_URL } from '../config';
+import { API_URL } from './config';
 import './ManualMode.css';
 
 function ManualMode({ onBack }) {
