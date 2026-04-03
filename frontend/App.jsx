@@ -14,10 +14,10 @@ import {
   ChevronRight
 } from 'lucide-react';
 
-import LiveMode from './components/LiveMode';
-import ManualMode from './components/ManualMode';
-import LandingPage from './components/LandingPage';
-import ChatBot from './components/ChatBot';
+import LiveMode from './LiveMode';
+import ManualMode from './ManualMode';
+import LandingPage from './LandingPage';
+import ChatBot from './ChatBot';
 import './App.css';
 
 function App() {
