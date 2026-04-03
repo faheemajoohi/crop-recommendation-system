@@ -21,7 +21,7 @@ API_KEY = "8f96af8e0f2466de3a56b467fd29ea79"
 
 # Load Chatbot Data
 try:
-    csv_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'chatbot_data.csv')
+    csv_path = os.path.join(os.path.dirname(__file__), 'chatbot_data.csv')
     df = pd.read_csv(csv_path)
     questions = df['question'].tolist()
     answers = df['answer'].tolist()
