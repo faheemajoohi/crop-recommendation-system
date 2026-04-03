@@ -58,8 +58,8 @@ def get_current_location():
 # ------------------------------
 # Use absolute paths relative to this file
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-MODEL_PATH = os.path.join(BASE_DIR, "model", "crop_recommendation_model.pkl")
-SCALER_PATH = os.path.join(BASE_DIR, "model", "scaler.pkl")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "crop_recommendation_model.pkl")
+SCALER_PATH = os.path.join(os.path.dirname(__file__), "scaler.pkl")
 
 try:
     model = joblib.load(MODEL_PATH)
