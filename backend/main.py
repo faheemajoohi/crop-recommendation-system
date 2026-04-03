@@ -12,7 +12,7 @@ import numpy as np
 # Add parent directory to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from app.utils import recommend_crop_live, recommend_crop_manual, get_current_location
+from utils import recommend_crop_live, recommend_crop_manual, get_current_location
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for React frontend
