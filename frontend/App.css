@@ -289,26 +289,35 @@ button {
   font-size: 0.96rem;
 }
 
-/* Make all buttons green */
-button {
-  background-color: var(--primary) !important; /* solid green */
-  color: white !important;
-  border: none !important;
+.primary-action-btn,
+.secondary-action-btn {
+  width: 100%;
+  border: none;
   border-radius: 14px;
   padding: 0.95rem 1rem;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
   transition: 0.25s ease;
 }
 
-/* Hover effect for all buttons */
-button:hover {
-  background-color: var(--primary-dark) !important; /* darker green */
+.primary-action-btn {
+  background: var(--gradient);
+  color: white;
+}
+
+.secondary-action-btn {
+  background: #eef7ee;
+  color: var(--primary-dark);
+  border: 1px solid #d7ead7;
+}
+
+.primary-action-btn:hover,
+.secondary-action-btn:hover {
   transform: translateY(-2px);
 }
 
