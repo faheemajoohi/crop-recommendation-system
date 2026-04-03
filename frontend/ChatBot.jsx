@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Bot } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { API_URL } from "./config";
+import { API_URL } from "./config.js"
 import './ChatBot.css';
 
 const ChatBot = () => {
