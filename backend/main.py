@@ -205,3 +205,14 @@ if __name__ == '__main__':
     print("\n" + "="*60 + "\n")
     
     app.run(debug=True, host='0.0.0.0', port=5001)
+
+
+
+
+
+
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
