@@ -580,22 +580,20 @@ min-width: 120px;   /* 🔥 ADD THIS */
 }
 
 .mode-badge {
-  background: rgba(22, 48, 25, 0.08) !important;
-  color: #163019 !important;
+  background: rgba(22, 48, 25, 0.08);
+  color: #163019;
   padding: 1rem 1.5rem;
   border-radius: 14px;
   font-size: 1.05rem;
   font-weight: 600;
-  margin-top: 1.5rem;
   width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  line-height: 1.6;
-  white-space: normal;       /* allow wrapping inside box */
-  overflow-wrap: break-word; /* prevent overflow */
-  word-break: break-word;
+  display: flex;              /* 🔥 IMPORTANT */
+  justify-content: center;    /* 🔥 CENTER HORIZONTAL */
+  align-items: center;        /* 🔥 CENTER VERTICAL */
+  white-space: nowrap;        /* 🔥 FORCE SINGLE LINE */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
 .error-message {
   background: #fee2e2;
   color: #dc2626;
