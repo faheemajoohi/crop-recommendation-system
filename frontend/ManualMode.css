@@ -97,3 +97,27 @@
     min-width: auto;
   }
 }
+
+.btn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: green;
+  color: white;
+}
+
+.btn-large {
+  width: 100%;
+  padding: 16px;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
