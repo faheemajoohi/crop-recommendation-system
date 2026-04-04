@@ -97,9 +97,10 @@
     min-width: auto;
   }
 }
-
+/* Button Styles */
 .btn {
-  padding: 15px 25px;
+  width: 100%;
+  padding: 16px;
   border: none;
   border-radius: 12px;
   font-size: 18px;
@@ -108,37 +109,22 @@
 }
 
 .btn-primary {
-  background-color: #2e7d32;
-  color: white;
+  background-color: #163019 !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: #1d3b21 !important;
+}
+
+.btn-primary:disabled {
+  background-color: #163019 !important;
+  color: white !important;
+  opacity: 1 !important;
+  cursor: not-allowed;
 }
 
 .btn-large {
   width: 100%;
   padding: 16px;
-}
-
-.btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-.btn {
-  width: 100%;
-  padding: 16px;
-  border: none;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: #1b5e20 !important;   /* dark footer green */
-  color: white !important;
-}
-
-.btn-primary:disabled {
-  background-color: #1b5e20 !important;   /* keep same green even when disabled */
-  color: white !important;
-  opacity: 1 !important;                  /* remove faded white look */
-  cursor: not-allowed;
 }
