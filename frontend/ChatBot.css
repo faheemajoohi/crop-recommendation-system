@@ -121,18 +121,18 @@
     overflow-wrap: break-word;
 }
 
-/* USER MESSAGE */
+/* USER MESSAGE - light green bubble, black text */
 .message.user .message-bubble {
-    background: #dff5e1;   /* light green */
-    color: black;          /* always black text */
+    background: #dff5e1;
+    color: black !important;
     border: 1px solid #b7d9b9;
     border-bottom-right-radius: 4px;
 }
 
-/* BOT MESSAGE */
+/* BOT MESSAGE - white bubble, black text */
 .message.bot .message-bubble {
     background: white;
-    color: black;          /* always black text */
+    color: black !important;
     border: 1px solid var(--border-light);
     border-bottom-left-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -154,13 +154,13 @@
     outline: none;
     font-size: 0.95rem;
     transition: border-color 0.2s;
-    background: white;
-    color: black !important;   /* typed text visible */
-    caret-color: black;        /* cursor visible */
+    background: white !important;
+    color: black !important;
+    caret-color: black !important;
 }
 
 .chat-input::placeholder {
-    color: #666;
+    color: #666 !important;
 }
 
 .chat-input:focus {
