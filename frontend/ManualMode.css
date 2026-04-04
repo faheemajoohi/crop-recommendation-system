@@ -569,14 +569,17 @@
   color: #163019 !important;
   padding: 1rem 1.5rem;
   border-radius: 14px;
-  text-align: center;
   font-size: 1.05rem;
   font-weight: 600;
   margin-top: 1.5rem;
-  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;       /* allow text to wrap inside box */
+  word-break: break-word;
 }
 
 .error-message {
