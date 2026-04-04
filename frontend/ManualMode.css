@@ -575,10 +575,9 @@
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;       /* allow text to wrap inside box */
+  line-height: 1.6;
+  white-space: normal;       /* allow wrapping inside box */
+  overflow-wrap: break-word; /* prevent overflow */
   word-break: break-word;
 }
 
