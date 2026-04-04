@@ -161,6 +161,8 @@
   border-radius: 24px;
   box-shadow: var(--shadow);
   width: 100%;
+  max-width: 900px;   /* 🔥 ADD THIS */
+  margin: auto;       /* 🔥 ADD THIS */
   text-align: center;
 }
 
@@ -213,15 +215,17 @@
   font-size: 1.35rem;
   margin-bottom: 1.5rem;
   font-weight: 600;
-  white-space: nowrap;
+  white-space: normal;   /* 🔥 change from nowrap */
 }
 
 .weather-grid,
 .soil-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* 🔥 CHANGE */
   gap: 1.5rem;
   margin-top: 1.5rem;
+  white-space: nowrap;
+min-width: 120px;   /* 🔥 ADD THIS */
 }
 
 .weather-item {
@@ -334,8 +338,19 @@
   }
 
   .mode-badge {
-    white-space: normal;
-  }
+  background: rgba(22, 48, 25, 0.08) !important;
+  color: #163019 !important;
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+
+  width: 100%;
+  text-align: center;
+
+  white-space: nowrap;   /* 🔥 IMPORTANT */
+}
 
   .result-actions {
     flex-direction: column;
