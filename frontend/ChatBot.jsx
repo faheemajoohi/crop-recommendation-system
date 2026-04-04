@@ -1,13 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Bot } from 'lucide-react';
+import { X, Send, Bot } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { API_URL } from "./config.js"
+import { API_URL } from "./config.js";
 import './ChatBot.css';
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { id: 1, text: "Hello! I'm your CropSense assistant. How can I help you with your farming today?", sender: 'bot' }
+    {
+      id: 1,
+      text: "Hello! I'm your CropSense assistant. How can I help you with your farming today?",
+      sender: 'bot'
+    }
   ]);
   const [inputText, setInputText] = useState('');
   const messagesEndRef = useRef(null);
@@ -24,9 +28,16 @@ const ChatBot = () => {
     e.preventDefault();
     if (!inputText.trim()) return;
 
+    const userMessageText = inputText;
+
     // Add user message
-    const newMessage = { id: Date.now(), text: inputText, sender: 'user' };
-    setMessages(prev => [...prev, newMessage]);
+    const newMessage = {
+      id: Date.now(),
+      text: userMessageText,
+      sender: 'user'
+    };
+
+    setMessages((prev) => [...prev, newMessage]);
     setInputText('');
 
     // Call Backend API
@@ -34,26 +45,30 @@ const ChatBot = () => {
       const response = await fetch(`${API_URL}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: inputText })
+        body: JSON.stringify({ query: userMessageText })
       });
 
       const data = await response.json();
-      
-      const botResponse = { 
-        id: Date.now() + 1, 
-        text: data.success ? data.response : "Sorry, I'm having trouble connecting to the server.", 
-        sender: 'bot' 
+
+      const botResponse = {
+        id: Date.now() + 1,
+        text: data.success
+          ? data.response
+          : "Sorry, I'm having trouble connecting to the server.",
+        sender: 'bot'
       };
-      setMessages(prev => [...prev, botResponse]);
-      
+
+      setMessages((prev) => [...prev, botResponse]);
     } catch (error) {
       console.error('Error sending message:', error);
-      const errorResponse = { 
-        id: Date.now() + 1, 
-        text: "Sorry, something went wrong. Please try again later.", 
-        sender: 'bot' 
+
+      const errorResponse = {
+        id: Date.now() + 1,
+        text: "Sorry, something went wrong. Please try again later.",
+        sender: 'bot'
       };
-      setMessages(prev => [...prev, errorResponse]);
+
+      setMessages((prev) => [...prev, errorResponse]);
     }
   };
 
@@ -61,7 +76,7 @@ const ChatBot = () => {
     <div className="chatbot-container">
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             className="chat-window"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -73,6 +88,7 @@ const ChatBot = () => {
                 <Bot size={20} />
                 <span>CropSense Assistant</span>
               </div>
+
               <button onClick={() => setIsOpen(false)} className="close-btn">
                 <X size={18} />
               </button>
@@ -81,12 +97,18 @@ const ChatBot = () => {
             <div className="chat-messages">
               {messages.map((msg) => (
                 <div key={msg.id} className={`message ${msg.sender}`}>
-                  {msg.sender === 'bot' && <div className="bot-avatar"><Bot size={14} /></div>}
+                  {msg.sender === 'bot' && (
+                    <div className="bot-avatar">
+                      <Bot size={14} />
+                    </div>
+                  )}
+
                   <div className="message-bubble">
                     {msg.text}
                   </div>
                 </div>
               ))}
+
               <div ref={messagesEndRef} />
             </div>
 
@@ -98,6 +120,7 @@ const ChatBot = () => {
                 placeholder="Ask about crops..."
                 className="chat-input"
               />
+
               <button type="submit" className="send-btn">
                 <Send size={18} />
               </button>
@@ -106,13 +129,13 @@ const ChatBot = () => {
         )}
       </AnimatePresence>
 
-      <motion.button 
+      <motion.button
         className="chat-toggle-btn"
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
+        {isOpen ? <X size={24} /> : <Bot size={24} />}
       </motion.button>
     </div>
   );
