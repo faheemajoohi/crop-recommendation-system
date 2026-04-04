@@ -121,3 +121,24 @@
   opacity: 0.7;
   cursor: not-allowed;
 }
+.btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #1b5e20 !important;   /* dark footer green */
+  color: white !important;
+}
+
+.btn-primary:disabled {
+  background-color: #1b5e20 !important;   /* keep same green even when disabled */
+  color: white !important;
+  opacity: 1 !important;                  /* remove faded white look */
+  cursor: not-allowed;
+}
