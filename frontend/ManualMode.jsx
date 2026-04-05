@@ -230,9 +230,11 @@ function ManualMode({ onBack }) {
                 </div>
               </div>
             </div>
-            <div className="mode-badge">
-                Mode: {result.mode} | Data Source: {result.soil_data_source}
-              </div>
+           <div style={{ display: "flex", justifyContent: "center" }}>
+  <div className="mode-badge">
+    Mode: {result.mode} | Data Source: {result.soil_data_source}
+  </div>
+</div>
 
             <div className="result-actions">
               <button className="btn btn-secondary" onClick={resetForm}>
