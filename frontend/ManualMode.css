@@ -75,17 +75,23 @@
   border: none;
   cursor: pointer;
 }
-
-.btn-primary {
-  background: #163019;
-  color: white;
+button:hover {
+  background-color: #1d3b21 !important;
+  color: #fff !important;
 }
-
+.btn-primary,
 .btn-secondary {
-  background: #163019;
-  color: white;
+  background: #163019 !important;
+  color: #fff !important;
+  border: none;
 }
 
+/* 🔥 HOVER FIX */
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: #1d3b21 !important;  /* darker green */
+  color: #fff !important;
+}
 /* RESULT SCREEN */
 .result-screen {
   display: flex;
