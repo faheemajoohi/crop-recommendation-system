@@ -2,6 +2,10 @@
   max-width: 1000px;
   margin: 0 auto;
 }
+.result-details {
+  width: 100% !important;
+  display: block !important;
+}
 
 /* Back Button */
 .back-btn {
@@ -129,18 +133,20 @@
 .mode-badge {
   margin-top: 1.5rem;
   padding: 1rem;
-  background: rgba(22, 48, 25, 0.08);
-  border-radius: 12px;
+
+  width: 100%;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 100%;
+  background: rgba(22, 48, 25, 0.08);
+  border-radius: 12px;
 
   font-weight: 600;
+  font-size: 1.05rem;
 
-  white-space: nowrap; /* 🔥 SINGLE LINE */
+  white-space: nowrap;
 }
 
 /* Actions */
