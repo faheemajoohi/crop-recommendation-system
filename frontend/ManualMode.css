@@ -1,15 +1,9 @@
+/* Container */
 .manual-mode {
   max-width: 1000px;
   margin: 0 auto;
 }
-.result-details {
-  width: 100% !important;
-  display: block !important;
-}
-.mode-badge {
-  width: fit-content;
-  margin: 1.5rem auto;
-}
+
 /* Back Button */
 .back-btn {
   background: var(--bg-white);
@@ -39,6 +33,7 @@
   box-shadow: var(--shadow);
 }
 
+/* Sections */
 .section {
   margin-bottom: 3rem;
 }
@@ -50,7 +45,7 @@
   margin-bottom: 1.5rem;
 }
 
-/* Grid */
+/* Form Grid */
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -75,24 +70,19 @@
   border: none;
   cursor: pointer;
 }
-button:hover {
-  background-color: #1d3b21 !important;
-  color: #fff !important;
-}
+
 .btn-primary,
 .btn-secondary {
-  background: #163019 !important;
-  color: #fff !important;
-  border: none;
+  background: #163019;
+  color: #fff;
 }
 
-/* 🔥 HOVER FIX */
 .btn-primary:hover,
 .btn-secondary:hover {
-  background: #1d3b21 !important;  /* darker green */
-  color: #fff !important;
+  background: #1d3b21;
 }
-/* RESULT SCREEN */
+
+/* Result Screen */
 .result-screen {
   display: flex;
   justify-content: center;
@@ -107,10 +97,11 @@ button:hover {
   text-align: center;
 }
 
+/* Details */
 .result-details {
   width: 100%;
   display: flex;
-  flex-direction: column; /* 🔥 FIX */
+  flex-direction: column;
 }
 
 /* Sections */
@@ -121,15 +112,15 @@ button:hover {
   margin-bottom: 1.5rem;
 }
 
-/* GRID FIX */
+/* Grid */
 .weather-grid,
 .soil-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* 🔥 FIX */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1rem;
 }
 
-/* ITEMS */
+/* Items */
 .weather-item,
 .soil-grid div {
   background: white;
@@ -137,29 +128,22 @@ button:hover {
   border-radius: 10px;
   text-align: center;
 }
-.result-card {
-  text-align: center;   /* ensures center alignment */
-}
-/* 🔥 FINAL MODE BADGE FIX */
+
+/* 🔥 MODE BADGE (FINAL PERFECT FIX) */
 .mode-badge {
-  margin-top: 1.5rem;
+  margin: 1.5rem auto;
   padding: 1rem 1.5rem;
 
   background: rgba(22, 48, 25, 0.08);
   border-radius: 12px;
 
-  display: flex;
-  justify-content: center;   /* ✅ center horizontally */
-  align-items: center;
-
-  width: 100%;
+  width: fit-content;
 
   font-weight: 600;
   font-size: 1.05rem;
 
+  text-align: center;
   white-space: nowrap;
-
-  text-align: center;        /* ✅ extra safety */
 }
 
 /* Actions */
