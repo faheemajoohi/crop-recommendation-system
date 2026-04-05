@@ -128,25 +128,29 @@
   border-radius: 10px;
   text-align: center;
 }
-
+.result-card {
+  text-align: center;   /* ensures center alignment */
+}
 /* 🔥 FINAL MODE BADGE FIX */
 .mode-badge {
   margin-top: 1.5rem;
-  padding: 1rem;
-
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem 1.5rem;
 
   background: rgba(22, 48, 25, 0.08);
   border-radius: 12px;
+
+  display: flex;
+  justify-content: center;   /* ✅ center horizontally */
+  align-items: center;
+
+  width: 100%;
 
   font-weight: 600;
   font-size: 1.05rem;
 
   white-space: nowrap;
+
+  text-align: center;        /* ✅ extra safety */
 }
 
 /* Actions */
