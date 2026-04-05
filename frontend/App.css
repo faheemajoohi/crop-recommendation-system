@@ -19,7 +19,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+.footer-line {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
 
+.footer-line strong {
+  color: #163019;
+  font-weight: 600;
+}
 body {
   font-family: 'Segoe UI', Roboto, sans-serif;
   background: #f7fbf7;
