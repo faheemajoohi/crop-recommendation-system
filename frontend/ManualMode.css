@@ -6,7 +6,10 @@
   width: 100% !important;
   display: block !important;
 }
-
+.mode-badge {
+  width: fit-content;
+  margin: 1.5rem auto;
+}
 /* Back Button */
 .back-btn {
   background: var(--bg-white);
