@@ -301,7 +301,7 @@ function App() {
         </div>
 
         <div className="footer-line">
-          © 2026 Smart Crop System • Built by Faheema Joohi S • academic project demonstration
+          © 2026 Smart Crop System • Built by <strong> Faheema Joohi S</strong>  • academic project demonstration
         </div>
       </footer>
 
