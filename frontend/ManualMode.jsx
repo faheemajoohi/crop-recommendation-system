@@ -229,11 +229,10 @@ function ManualMode({ onBack }) {
                   <div>pH: {result.input_data.ph}</div>
                 </div>
               </div>
-
-              <div className="mode-badge">
+            </div>
+            <div className="mode-badge">
                 Mode: {result.mode} | Data Source: {result.soil_data_source}
               </div>
-            </div>
 
             <div className="result-actions">
               <button className="btn btn-secondary" onClick={resetForm}>
